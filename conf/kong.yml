@@ -1,0 +1,15 @@
+_format_version: "2.1"
+
+services:
+  - name: mock-service
+    url: https://testplugin.free.beeceptor.com/todos
+    routes:
+      - name: todos-route
+        paths:
+          - /todos
+
+plugins:
+  - name: testplugin
+    service: mock-service
+    config:
+      add_header: true
