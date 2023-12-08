@@ -10,7 +10,7 @@ return {
       {
          type = "record",
          fields = {
-            { add_header = {  description = "add resp header",type = "boolean", required = true, default = true }, },
+            { add_header = {  description = "add resp header",type = "boolean", required = true, default = false }, },
          }, 
       }, 
    },

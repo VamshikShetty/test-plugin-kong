@@ -12,8 +12,11 @@ end
 
 -- plugin built-in method to handle response header filtering
 function Handler:header_filter(conf)
-   kong.log.err("setting header")
-   kong.response.set_header("Bye-World", "this is on the response")
+   if conf.add_header then
+      kong.response.set_header("Bye-World", "this is on the response 1")
+   else
+      kong.response.set_header("Bye-World", "this is on the response 2")
+   end
 end
 
 -- return the plugin class

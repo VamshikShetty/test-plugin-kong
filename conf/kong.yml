@@ -12,4 +12,4 @@ plugins:
   - name: testplugin
     service: mock-service
     config:
-      add_header: true
+      add_header: false

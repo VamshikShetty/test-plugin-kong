@@ -19,5 +19,7 @@ if [[ "$1" == "kong" && "$2" == "docker-start" ]]; then
    # Set up custom plugins
    luarocks make testplugin-0.1-1.rockspec
 
-   /usr/local/openresty/nginx/sbin/nginx -p "$PREFIX" -c nginx.conf
+   exec /usr/local/openresty/nginx/sbin/nginx -p "$PREFIX" -c nginx.conf
 fi
+
+exec "$@"
